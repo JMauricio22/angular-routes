@@ -1,0 +1,29 @@
+<div class="container my-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-8 col-sm-12">
+      <div class="card">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <img [src]="hero.img" [alt]="hero.nombre" class="img-fluid" />
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="card-body">
+              <h3 class="display-5">{{ hero.nombre | uppercase }}</h3>
+              <span class="fst-italic text-secondary d-block my-1">
+                {{ hero.aparicion }}
+                <!-- {{ hero.aparicion | date: "y" }} -->
+              </span>
+              <p>
+                {{ hero.bio }}
+              </p>
+              <a [routerLink]="['/heroes']" class="btn btn-outline-primary"
+                ><i class="bi bi-arrow-left-square-fill"></i> Regresar a
+                heroes</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

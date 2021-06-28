@@ -1,0 +1,30 @@
+<div class="container my-5 animated fadeIn" *ngIf="filterHeroes.length == 0">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-info">
+        No existen resultados para el termino :
+        <span class="fst-italic text-decoration-underline">{{ filter }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container my-4">
+  <div class="row" *ngIf="filterHeroes.length != 0">
+    <div class="col-12 my-4">
+      <h2 class="text-center display-5">
+        Resultados para la busqueda:
+        <span class="fst-italic">{{ filter }}</span>
+      </h2>
+    </div>
+  </div>
+  <div class="row row-cols-3">
+    <app-hero-card
+      (selectedHero)="showHero($event)"
+      [hero]="hero"
+      [index]="hero.id"
+      *ngFor="let hero of filterHeroes"
+      class="col-4"
+    ></app-hero-card>
+  </div>
+</div>

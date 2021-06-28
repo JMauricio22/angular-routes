@@ -1,0 +1,15 @@
+<div class="card w-100" style="width: 18rem">
+  <img [src]="hero.img" class="card-img-top" [alt]="hero.nombre" />
+  <div class="card-body">
+    <h5 class="card-title">{{ hero.nombre }}</h5>
+    <p class="card-text">
+      {{ hero.bio }}
+    </p>
+    <span class="d-block mb-2 text-secondary fst-italic">{{
+      hero.aparicion
+    }}</span>
+    <button (click)="showHero(index)" class="btn btn-outline-primary w-100">
+      Ver mas...
+    </button>
+  </div>
+</div>

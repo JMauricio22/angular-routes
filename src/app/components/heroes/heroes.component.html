@@ -1,0 +1,17 @@
+<div class="container my-4">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="display-5">DC and Marvel Heroes</h2>
+      <hr />
+    </div>
+  </div>
+  <div class="row row-cols-3">
+    <app-hero-card
+      (selectedHero)="showHero($event)"
+      [hero]="hero"
+      [index]="i"
+      *ngFor="let hero of heroes; let i = index"
+      class="col-4"
+    ></app-hero-card>
+  </div>
+</div>
